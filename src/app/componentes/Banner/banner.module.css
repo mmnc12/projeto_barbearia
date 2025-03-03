@@ -40,8 +40,8 @@
 }
 
 .cardDepoimento {
+  max-width: 1024px;
   width: 100%;
-  width: 1024px;
   display: flex;
   overflow-x: auto;
   gap: 1rem;
