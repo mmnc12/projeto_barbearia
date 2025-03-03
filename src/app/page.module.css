@@ -20,13 +20,13 @@
 
 .whatsappButton {
   position: fixed;
-  bottom: 20px; /* Distância do rodapé */
-  right: 20px; /* Distância da direita */
-  background-color: #25d366; /* Cor do WhatsApp */
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #25d366; 
   border-radius: 50%;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  z-index: 1000; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,12 +34,12 @@
 }
 
 .whatsappButton:hover {
-  background-color: #128c7e; /* Cor do WhatsApp quando o botão é hover */
+  background-color: #128c7e; 
 }
 
 .whatsappIcon {
   color: white;
-  font-size: 2rem; /* Tamanho do ícone */
+  font-size: 2rem; 
 }
 
 
@@ -68,7 +68,6 @@
     font-size: 0.9rem; 
   }
 
-  
   .page {
     width: 100%;
     display: flex;
@@ -85,7 +84,6 @@
     align-items: center;
   }
 
-  
   .button {
     background-color: #e4bc43;
     padding: 10px 20px; 
@@ -97,5 +95,27 @@
 
   .button:hover {
     background-color: #c99a2f; 
+  }
+}
+
+
+@media (orientation: landscape) {
+  .page {
+    flex-direction: row; 
+  }
+
+  .whatsappButton {
+    bottom: 10px; 
+    right: 10px; 
+  }
+}
+
+@media (orientation: portrait) {
+  .page {
+    flex-direction: column; 
+  }
+
+  .whatsappButton {
+    bottom: 20px; 
   }
 }
