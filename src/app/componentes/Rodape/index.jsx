@@ -14,11 +14,11 @@ export default function Rodape() {
           <Image className={estilos.img} src={logo} alt="logo" />
         </Link>
         <div className={estilos.links}>
-          <Link className={estilos.link} href="#">Sobre</Link>
-          <Link className={estilos.link} href="#">Serviços</Link>
-          <Link className={estilos.link} href="#">Depoimentos</Link>
-          <Link className={estilos.link} href="#">Agendamento</Link>
-          <Link className={estilos.link} href="#">Localização</Link>
+          <Link className={estilos.link} href="#sobre">Sobre</Link>
+          <Link className={estilos.link} href="#serviços">Serviços</Link>
+          <Link className={estilos.link} href="#depoimentos">Depoimentos</Link>
+          <Link className={estilos.link} href="#agendamento">Agendamento</Link>
+          <Link className={estilos.link} href="#localização">Localização</Link>
         </div>
         <div className={estilos.redeSocial}>
           <IoLogoInstagram className={estilos.icon} />
