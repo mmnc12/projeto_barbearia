@@ -1,95 +1,67 @@
+import { FaWhatsapp } from 'react-icons/fa';
 import Image from "next/image";
-import styles from "./page.module.css";
+import estilos from "./page.module.css";
+import Header from "./componentes/Header";
+import Hero from "./componentes/Hero";
+import Servicos from "./componentes/Servicos";
+import Botao from "./componentes/Botao";
+import Pacote from "./componentes/Pacote";
+import Equipe from "./componentes/Equipe";
+import Espaco from "./componentes/Espaco";
+import Banner from "./componentes/Banner";
+import Rodape from "./componentes/Rodape";
+
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={estilos.page}>
+      <main>
+        <Header />
+        <Hero />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+        <Servicos
+          titulo={"CONHEÇA NOSSOS SERVIÇOS"}
+          paragrafo={"Confira abaixo a tabela de preços dos serviços oferecidos pela Barbearia do João"}
+        />
+
+        <Botao />
+
+        <Pacote
+          titulo={"PACOTES"}
+          paragrafo={"Confira abaixo as opções de pacotes de pré-agendamento."}
+        />
+
+        <Botao />
+
+        <Equipe
+          titulo={"EQUIPE"}
+          paragrafoTitulo={"Nossa equipe é formada por cabelereiros e barbeiros experientes."}
+          subtitulo={"EXPERIÊNCIA"}
+          paragrafo={"Nossa equipe conta com cabeleiros com pelos menos 10 anos de experiência, garantindo um serviço feito com excelência."}
+
+          titulo2={"PROFISSIONAIS ATUALIZADOS"}
+          paragrafo2={"Nossos profissionais estão preparados tanto para cortes clássicos como para novas tendências"}
+        />
+
+        <Espaco
+          titulo={"ESPAÇO"}
+        />
+
+        <Equipe
+          subtitulo={"AMBIENTE CLIMATIZADO"}
+          paragrafo={"O salão é climatizado para oferecer conforto nos dias mais quentes."}
+
+          titulo2={"ESTÉTICA MODERNA"}
+          paragrafo2={"Nosso espeça possui um visual moderno, oferecendo um local muito aconchegante."}
+        />
+
+        <Banner />
+        <Rodape />
+
+        <a href="https://wa.me/99999999999" className={estilos.whatsappButton} target="_blank" rel="noopener noreferrer">
+          <FaWhatsapp className={estilos.whatsappIcon} />
+        </a>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

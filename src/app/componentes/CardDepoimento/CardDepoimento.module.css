@@ -1,0 +1,60 @@
+.cardDepoimento {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f9f9f9; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.qualificacao small {
+  font-size: 30px;
+  color: yellow;
+  margin: 0 2px;
+}
+
+.nome h3 {
+  font-family: 1.2rem;
+  font-weight: bold;
+}
+
+.depoimento p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .cardDepoimento {
+    width: 100%; 
+    max-width: 300px; 
+    padding: 15px; 
+  }
+
+  .img {
+    width: 70px; 
+    height: 70px;
+  }
+
+  .qualificacao small {
+    font-size: 20px; 
+  }
+
+  .nome h3 {
+    font-size: 1rem; 
+  }
+
+  .depoimento p {
+    font-size: 0.9rem; 
+  }
+}
