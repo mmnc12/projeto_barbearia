@@ -12,10 +12,10 @@ export default function Rodape() {
       <div>
         <Image className={estilos.img} src={logo} alt="logo" />
         <nav>
-          <Link className={estilos.link} href="#sobre">Sobre</Link>
-          <Link className={estilos.link} href="#servico">Serviços</Link>
-          <Link className={estilos.link} href="#depoimento">Depoimentos</Link>
-          <Link className={estilos.link} href="#agenda">Agendamento</Link>
+        <Link className={estilos.link} href="#sobre">Sobre</Link>
+          <Link className={estilos.link} href="#servicos">Serviços</Link>
+          <Link className={estilos.link} href="#depoimentos">Depoimentos</Link>
+          <Link className={estilos.link} href="#agendamento">Agendamento</Link>
           <Link className={estilos.link} href="#localizacao">Localização</Link>
         </nav>
         <div className={estilos.icons}>
