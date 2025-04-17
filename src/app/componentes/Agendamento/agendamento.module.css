@@ -1,0 +1,83 @@
+.container_agendamento {
+  background-image: url("../../../../public/banner5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-flow: column wrap;
+  height: 200px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.container_agendamento > div {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgba(255, 255, 255, 0.505);
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_agendamento > div > h1 {
+  text-align: center;
+  color: #e3bb42ff;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 10px;
+}
+
+.container_agendamento > div > p {
+  text-align: center;
+  text-shadow: 2px 2px 2xp #e3bb42ff;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(227, 187, 66, 0.262);
+}
+
+.contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contato > small {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(227, 187, 66, 0.262);
+}
+
+@media screen and (min-width: 768px) {
+  .container_agendamento {
+    height: 400px;
+  }
+
+  .container_agendamento > div {
+    max-width: 1024px;
+    height: 200px;
+  }
+
+  .container_agendamento > div > h1 {
+    font-size: 2em;
+  }
+
+  .container_agendamento > div > p {
+    font-size: 1.2em;
+    max-width: 600px;
+  }
+
+  .contato > small {
+    font-size: 1.2em;
+  }
+}

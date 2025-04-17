@@ -1,0 +1,66 @@
+.container_contato {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  flex-flow: column wrap;
+  padding: 10px;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.238);
+}
+
+.container_contato > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  margin: auto;
+}
+
+.container_contato > div > h2 {
+  width: 200px;
+  margin: 0px auto 10px;
+}
+
+.linha {
+  border-bottom: 10px solid #e3bb42ff;
+  width: 20%;
+  text-align: center;
+  margin: 0px auto 10px;
+}
+
+.container_contato > div > p {
+  text-align: center;
+  width: 200px;
+  margin: 0px auto 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .container_contato {
+    max-width: 1024px;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container_contato {
+    max-width: 1024px;
+    margin: auto;
+    position: absolute;
+    flex-flow: row nowrap;
+
+    align-items: flex-start;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, 50%);
+  }
+}
