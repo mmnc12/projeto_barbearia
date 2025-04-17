@@ -1,126 +1,79 @@
 .container_rodape {
-  width: 100%;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: auto;
-  background-color: #000000;
-  padding: 20px 0;
-}
-
-.rodape {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-flow: column wrap;
   padding: 20px;
+  width: 100%;
+  text-align: center;
+  gap: 5px;
 }
 
-.img {  
+.img {
   width: 100px;
-  height: auto;
-  max-width: 15vw;
+  height: 50px;
+  margin-bottom: 20px;
 }
 
-.links {
+.container_rodape > div > nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
+  gap: 5px;
+  margin-bottom: 20px;
 }
 
 .link {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;
+  color: white;
 }
 
-.link:hover {
-  color: #e4bc43;
-  text-decoration: underline;
-}
-
-.redeSocial {
+.icons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.redeSocial .icon {
-  font-size: 1.2rem;
-  color: #fff;
+.sociais_icons {
+  color: white;
+  width: 20px;
+  height: 20px;
 }
 
-.auto {
-  width: 100%;
-  color: #fff;
+.autor {
+  justify-content: center;
   text-align: center;
-  padding: 10px;
-  font-size: 0.9rem;
+  color: white;
+  font-size: .8em;
 }
 
-@media (max-width: 768px) {
-  .rodape {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .img {
-    width: 80px;
-  }
-
-  .links {
-    gap: 10px;
-  }
-
-  .link {
-    font-size: 0.9rem;
-  }
-
-  .redeSocial {
-    gap: 10px;
-  }
-
-  .redeSocial .icon {
-    font-size: 1rem;
-  }
-
-  .auto {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .rodape {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .img {
-    width: 70px;
-  }
-
-  .links {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .link {
-    font-size: 0.8rem;
-  }
-
-  .redeSocial {
+@media screen and (min-width: 768px) {
+  .container_rodape {
     justify-content: center;
+    flex-flow: row wrap;
+    padding: 20px 100px;
   }
 
-  .redeSocial .icon {
-    font-size: 0.9rem;
+  .container_rodape > div {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .auto {
-    font-size: 0.75rem;
+  .container_rodape > div > nav {
+    flex-flow: row wrap;
+  }
+
+  .link:hover {
+    color: #e3bb42ff;
+    text-decoration: underline;
+  }
+
+  .autor {
+    display: flex !important;
+    justify-content: center !important;
   }
 }

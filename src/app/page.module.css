@@ -1,32 +1,29 @@
 .page {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+  background-color: #faf8f2;
+  overflow-x: hidden;
 }
 
 .page main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.button {
-  background-color: #e4bc43;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 .whatsappButton {
   position: fixed;
-  bottom: 20px; 
-  right: 20px; 
-  background-color: #25d366; 
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
   border-radius: 50%;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; 
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,84 +35,19 @@
 }
 
 .whatsappIcon {
-  color: white;
-  font-size: 2rem; 
+  color: white; 
 }
 
-
-@media (max-width: 768px) {
-  .cardDepoimento {
-    width: 100%; 
-    max-width: 300px; 
-    padding: 15px; 
-    margin: 10px; 
-  }
-
-  .img {
-    width: 70px; 
-    height: 70px;
-  }
-
-  .qualificacao small {
-    font-size: 20px; 
-  }
-
-  .nome h3 {
-    font-size: 1rem; 
-  }
-
-  .depoimento p {
-    font-size: 0.9rem; 
-  }
-
-  .page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .page main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .button {
-    background-color: #e4bc43;
-    padding: 10px 20px; 
-    font-size: 1rem; 
-    border: none;
-    border-radius: 5px; 
-    cursor: pointer;
-  }
-
-  .button:hover {
-    background-color: #c99a2f; 
+@media screen and (min-width: 768px) {
+  .whatsappIcon {
+    width: 20px;
+    height: 20px;
   }
 }
 
-
-@media (orientation: landscape) {
-  .page {
-    flex-direction: row; 
-  }
-
-  .whatsappButton {
-    bottom: 10px; 
-    right: 10px; 
-  }
-}
-
-@media (orientation: portrait) {
-  .page {
-    flex-direction: column; 
-  }
-
-  .whatsappButton {
-    bottom: 20px; 
+@media screen and (min-width: 992px) {
+  .whatsappIcon {
+    width: 30px;
+    height: 30px;
   }
 }

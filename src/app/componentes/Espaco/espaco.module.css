@@ -1,59 +1,126 @@
-.espaco {
+.container_espaco {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  width: 100vw;
+  padding: 20px;
 }
 
-.container_espaco {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.titulo {
-  padding-bottom: 20px;
+.container_espaco > h2 {
   text-align: center;
+  padding: 10px;
+  margin-top: 10px;
 }
 
-.imagem {
-  width: 100%;
-  max-width: 1024px;
+.imagens {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  overflow: hidden;
+  flex-flow: column wrap;
   gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .img {
-  flex: 1 1 calc(25% - 10px);
-  max-width: calc(25% - 10px);
-  height: 300px;
+  width: 100%;
+  height: 431px;
   object-fit: cover;
-  border: 1px solid #e4bc43;
+  overflow: hidden;
 }
 
+.servicos {
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  gap: 20px;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.238);
+}
 
-@media (max-width: 1024px) {
-  .img {
-    flex: 1 1 calc(33.33% - 10px);
-    max-width: calc(33.33% - 10px);
+.texto > h3 {
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.img_texto {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.img_texto > h3 {
+  display: flex;
+  text-align: start;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.img_texto > p {
+  text-align: center;
+  padding: 10px;
+}
+
+.texto > p {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .container_espaco > h2 {
+    font-size: 1.8em;
   }
-}
 
-@media (max-width: 768px) {
+  .imagens {
+    max-width: 1024px;
+    flex-flow: row wrap;
+    margin: auto;
+    justify-content: center;
+  }
+
   .img {
+    flex: 1 1 calc(50% - 5px);
+    width: auto;
+    min-width: 358px;
+    height: auto;
+  }
+
+  .servicos {
+    max-width: 1204px;
+    flex-flow: row nowrap;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .img_texto {
     flex: 1 1 calc(50% - 10px);
-    max-width: calc(50% - 10px);
-    height: 250px;
+    align-items: flex-start;
+  }
+
+  .texto {
+    width: 100%;
+    max-width: calc(500px - 10px);
+    padding-left: 10px;
+  }
+
+  .texto > h3 {
+    font-size: 1.5em;
+  }
+
+  .texto p {
+    max-width: 456px;
+    font-size: 1.1em;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 992px) {
+  .imagens {
+    flex-flow: row nowrap;
+  }
+
   .img {
-    flex: 1 1 100%;
-    max-width: 100%;
-    height: 200px;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 200px;
+    height: auto;
   }
 }

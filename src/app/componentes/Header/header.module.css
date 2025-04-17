@@ -1,100 +1,61 @@
 .container_header {
-  width: 100%;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #e4bc43;
-  z-index: 1000;
-  background-color: #000000;
-  height: 70px;
-  /* position: fixed; */
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-
-.container_navegacao {
-  display: flex;
-  justify-content: space-between;
+  flex-flow: column wrap;
+  padding: 20px;
   width: 100%;
-  align-items: center;
-  max-width: 1024px;
-  padding: 10px 20px;
-  background-color: #000000;
+  border-bottom: 1px solid #e3bb42ff;
+  text-align: center;
+  gap: 5px;
 }
 
 .img {
   width: 100px;
-  height: 40px;
+  height: 50px;
 }
 
-.links {
+.container_header > div > nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  flex-flow: column wrap;
+  margin-top: 10px;
+  gap: 5px;
 }
 
 .link {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;
+  margin-left: 10px;
+  color: white;
 }
 
-.link:hover {
-  color: #e4bc43;
-  text-decoration: underline;
-}
 
-@media (max-width: 768px) {
-  .container_navegacao {
-    padding: 10px 15px;
-  }
-
-  .img {
-    width: 90px;
-    height: 36px;
-  }
-
-  .links {
-    gap: 10px;
-  }
-
-  .link {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .container_navegacao {
-    flex-direction: column;
-    gap: 5px;
-    padding: 10px;
-  }
-
-  .img {
-    width: 80px;
-    height: 32px;
-  }
-
-  .links {
-    flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .container_header {
     justify-content: center;
-    gap: 8px;
+    flex-flow: row wrap;
+    padding: 20px 100px;
+
+    position: fixed;
+    top: 0;
+    z-index: 100;
   }
 
-  .link {
-    font-size: 0.85rem;
+  .container_header > div {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1em;
   }
-}
 
-@media (max-width: 420px) {
-  .links {
-    gap: 5px;
+  .container_header > div > nav {
+    flex-flow: row wrap;
   }
 
-  .link {
-    font-size: 0.8rem;
-    padding: 5px;
+  .link:hover {
+    color: #e4bc43;
+    text-decoration: underline;
   }
 }

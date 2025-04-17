@@ -1,58 +1,55 @@
-import estilos from "./equipe.module.css";
+import estilos from "./pacote.module.css";
 import Image from "next/image";
 import tesoura_pente from "../../../../public/tesoura-e-pente.png";
+import Botao from "../Botao";
 
-export default function Pacote(props) {
+export default function Pacote() {
   return (
-    <div className={estilos.container_servicos}>
+    <div className={estilos.container_pacote}>
+      <div className={estilos.btn}>
+        <Botao  />
+      </div>
+      <h2>PACOTES</h2>
+      <p>Confira abaixo as opções de pacotes de pré-agendamento.</p>
       <div className={estilos.servicos}>
-        <header className={estilos.titulo}>
-          <h1>{props.titulo}</h1>
-          <p>{props.paragrafo}</p>
-        </header>
-        <div className={estilos.cards}>
-          <div className={estilos.container_card}>
-            <div className={estilos.imagem}>
-              <Image className={estilos.img} src={tesoura_pente} alt="Pente e tesoura" />
-            </div>
-            <div className={estilos.descricao}>
-              <h2>PACOTE 1</h2>
-              <p>Pacote com 2 agendamentos de corte de cabelo adulto.</p>
-              <span>R$ 70</span>
-            </div>
+        <div className={estilos.img_texto}>
+          <div className={estilos.img}>
+            <Image className={estilos.imagem} src={tesoura_pente} alt="Imagem de uma tesoura e um pente" />
           </div>
-          
-          <div className={estilos.container_card}>
-            <div className={estilos.imagem}>
-              <Image className={estilos.img} src={tesoura_pente} alt="Pente e tesoura" />
-            </div>
-            <div className={estilos.descricao}>
-              <h2>PACOTE 2</h2>
-              <p>Pacote com 4 agendamentos de corte de cabelo adulto.</p>
-              <span>R$ 130</span>
-            </div>
+          <div className={estilos.texto}>
+            <h3>PACOTE 1</h3>
+            <p>Pacote com 2 agendamentos de corte de cabelo adulto</p>
+            <p className={estilos.preco}>R$ 70</p>
           </div>
-
-          <div className={estilos.container_card}>
-            <div className={estilos.imagem}>
-              <Image className={estilos.img} src={tesoura_pente} alt="Pente e tesoura" />
-            </div>
-            <div className={estilos.descricao}>
-              <h2>PACOTE 3</h2>
-              <p>Pacote com 6 agendamentos de corte de cabelo adulto.</p>
-              <span>R$ 200</span>
-            </div>
+        </div>
+        <div className={estilos.img_texto}>
+          <div className={estilos.img}>
+            <Image className={estilos.imagem} src={tesoura_pente} alt="Imagem de uma tesoura e um pente" />
           </div>
-
-          <div className={estilos.container_card}>
-            <div className={estilos.imagem}>
-              <Image className={estilos.img} src={tesoura_pente} alt="Pente e tesoura" />
-            </div>
-            <div className={estilos.descricao}>
-              <h2>PACOTE 4</h2>
-              <p>Pacote com 8 agendamentos de corte de cabelo adulto.</p>
-              <span>R$ 250</span>
-            </div>
+          <div className={estilos.texto}>
+            <h3>PACOTE 2</h3>
+            <p>Pacote com 4 agendamentos de corte de cabelo adulto.</p>
+            <p className={estilos.preco}>R$ 130</p>
+          </div>
+        </div>
+        <div className={estilos.img_texto}>
+          <div className={estilos.img}>
+            <Image className={estilos.imagem} src={tesoura_pente} alt="Imagem de uma tesoura e um pente" />
+          </div>
+          <div className={estilos.texto}>
+            <h3>PACOTE 3</h3>
+            <p>Pacote com 6 agendamentos de corte de cabelo adulto.</p>
+            <p className={estilos.preco}>R$ 200</p>
+          </div>
+        </div>
+        <div className={estilos.img_texto}>
+          <div className={estilos.img}>
+            <Image className={estilos.imagem} src={tesoura_pente} alt="Imagem de uma tesoura e um pente" />
+          </div>
+          <div className={estilos.texto}>
+            <h3>PACOTE 4</h3>
+            <p>Pacote com 8 agendamentos de corte de cabelo adulto.</p>
+            <p className={estilos.preco}>R$ 250</p>
           </div>
         </div>
       </div>
