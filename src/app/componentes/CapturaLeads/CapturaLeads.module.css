@@ -1,0 +1,282 @@
+
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.titulo {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.paragrafo {
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.formWrapper {
+    background: white;
+    /* border-radius: 16px; */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.formWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e3bb42ff, rgb(186, 152, 47), #301d27);
+}
+
+.formHeader {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.formHeader h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.formHeader p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.leadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.formGroup input {
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    background-color: #f9fafb;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #e3bb42ff;
+    background-color: white;
+}
+
+/* This is a crucial change for CSS Modules:
+   You might need to adjust your validation styling.
+   Since `:valid` and `:invalid` pseudo-classes work automatically,
+   but custom errors are applied via `styles.invalid`.
+   Ensure styles for .formGroup input.invalid are robust.
+*/
+.formGroup input:valid {
+    border-color: #10b981;
+}
+
+/* Make sure this class is styled if you manually apply 'invalid' */
+.formGroup input.invalid {
+    /* New class to apply red border for custom validation errors */
+    border-color: #ef4444;
+}
+
+
+.formGroup input:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+
+.errorMessage {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 4px;
+    min-height: 16px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.errorMessage.show {
+    opacity: 1;
+}
+
+.submitBtn {
+    background: linear-gradient(135deg, rgb(234, 200, 98), #e3bb42ff);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submitBtn:hover {
+    background: #fff;
+    color: #e4bc43;
+    border: 1px solid #e4bc43;
+}
+
+/* .submitBtn:active {
+    transform: translateY(0);
+} */
+
+/* .submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+} */
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 24px;
+    animation: slideIn 0.3s ease;
+}
+
+.message.success {
+    background-color: #ecfdf5;
+    border: 1px solid #d1fae5;
+    color: #065f46;
+}
+
+.message.error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.messageIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.message.success .messageIcon {
+    background-color: #10b981;
+    color: white;
+}
+
+.message.error .messageIcon {
+    background-color: #ef4444;
+    color: white;
+}
+
+.messageContent h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.messageContent p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .formWrapper {
+        padding: 24px;
+    }
+
+    .formHeader h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .formWrapper {
+        padding: 20px;
+    }
+
+    .formHeader {
+        margin-bottom: 24px;
+    }
+
+    .leadForm {
+        gap: 20px;
+    }
+}

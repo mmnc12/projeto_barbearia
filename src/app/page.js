@@ -14,6 +14,7 @@ import Qualificacao from './componentes/Qualificacao';
 import Contato from './componentes/Contato';
 import Agendamento from './componentes/Agendamento';
 import Localizacao from './componentes/Localidade';
+import CapturaLeads from './componentes/CapturaLeads';
 
 
 export default function Home() {
@@ -31,6 +32,9 @@ export default function Home() {
         <Servicos />
 
         <Pacote />
+
+        <CapturaLeads />
+
 
         <Equipe />
 
