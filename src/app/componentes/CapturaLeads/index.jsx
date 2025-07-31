@@ -254,7 +254,7 @@ export default function CapturaLeads() {
                     <div className={`${estilo.message} ${estilo.success}`}>
                         <div className={estilo.messageIcon}>✓</div>
                         <div className={estilo.messageContent}>
-                            <h3>Lead cadastrado com sucesso!</h3>
+                            <h3>Dados cadastrado com sucesso!</h3>
                             <p>{submitMessage.text}</p>
                         </div>
                     </div>
