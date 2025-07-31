@@ -12,6 +12,12 @@
 .servicos {
   max-width: 1024px;
   width: 100%;
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  overflow: hidden;
+  gap: 20px;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.238);
 }
 
 .container_equipe > h2 {
@@ -25,14 +31,6 @@
   padding: 10px;
 }
 
-.servicos {
-  background-color: white;
-  display: flex;
-  flex-flow: column wrap;
-  overflow: hidden;
-  gap: 20px;
-  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.238);
-}
 
 .img_texto {
   display: flex;
