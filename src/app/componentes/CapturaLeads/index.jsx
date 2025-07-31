@@ -198,6 +198,7 @@ export default function CapturaLeads() {
                             type="text"
                             id="nome"
                             name="nome"
+                            minLength={2}
                             required
                             placeholder="Digite seu nome completo"
                             autoComplete="name"
