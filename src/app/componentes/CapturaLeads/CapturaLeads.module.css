@@ -1,11 +1,11 @@
 
-
 .container {
     width: 100%;
-    max-width: 1024px;
     display: flex;
     flex-direction: column;
     margin: 20px auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .titulo {
@@ -30,6 +30,8 @@
     padding: 32px;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 1024px;
 }
 
 .formWrapper::before {
@@ -253,9 +255,16 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95vw;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 16px;
+        /* max-width: 98vw; */
     }
 
     .formWrapper {
