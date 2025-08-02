@@ -156,7 +156,7 @@ export default function CapturaLeads() {
 
         try {
             const { error } = await supabase
-                .from('Leads')
+                .from('LeadsI')
                 .insert([leadData]);
 
             if (error) {
